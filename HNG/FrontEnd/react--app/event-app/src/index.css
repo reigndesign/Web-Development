@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* @import "tailwindcss"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/*
+#12464E
+#0E464F
+#FAFAFA
+#041E23
+#24A0B5
+#FFFFFF
+#B3B3B3
+*/
+
+body {
+  background: #041E23;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.main--navbar {
+  border: 2px solid #0E464F;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.nav--item {
+  gap: 30px;
+  text-transform: uppercase;
+  color: #FAFAFA;
+  font-size: 14px;
+
+}
+
+
+.main--navbar a:link,
+.main--navbar a:visited {
+  color: #041E23;
+  font-size: 14px;
+
+  padding: 10px 30px;
+  background: #FAFAFA;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.main--navbar a:hover,
+.main--navbar a:active {
+  background: #24A0B5;
+
+}
+
+.--mainForm {
+  background: #041E23;
+  border: 2px solid #0E464F;
+  border-radius: 10px;
+  margin-top: 20px;
+
+}
+
+.reg--text {
+  color: #FAFAFA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 510px;
+  padding: 20px;
+}
+
+/* .--mainForm * {
+  padding: 0;
+  margin: 0;
+} */
+
+.event--card {
+  background: #08252B;
+  border: 2px solid #0E464F;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.event--card-detail {
+  padding: 25px;
+  border: 2px solid #0E464F;
+  border-radius: 10px;
+}

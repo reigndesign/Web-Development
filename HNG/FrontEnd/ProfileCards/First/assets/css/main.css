@@ -1,0 +1,170 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+}
+
+
+.outer {
+    height: 100vh;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#switch:checked ~ .outer {
+    background: #092c3e;
+}
+
+.outer .content {
+    position: relative;
+    display: flex;
+    max-width: 610px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#switch:checked ~ .outer .content {
+    background: #092c3e;
+}
+
+.content .toggle {
+    position: absolute;
+    top: 13px; right: 15px;
+    width: 40px; height: 20px;
+    border-radius: 20px;
+    background: #092c3e;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#switch:checked ~ .outer .toggle {
+    background: #fff;
+}
+
+.toggle .circle {
+    height: 16px;
+    width: 16px;
+    background: #fff;
+    border-radius: 50%;
+    margin-left: 3px;
+    transition: all 0.3s ease;
+}
+
+#switch:checked ~ .outer .circle {
+    background: #092c3e;
+}
+
+#switch:checked ~ .outer .circle {
+    margin-left: 22px;
+}
+
+.content .image-box {
+    height: 232px;
+    width: 200px;
+    border-radius: 12px;
+    background: #092c3e;
+    padding: 3px;
+}
+
+#switch:checked ~ .outer .image-box {
+    box-shadow: 0px 5px 10px rhda(0, 0, 0, 0.15);
+}
+
+.content .image-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #fff;
+}
+
+#switch:checked ~ .outer .image-box img {
+    background: transparent;
+}
+
+
+.content .details {
+    width: 58%;
+    margin: 10px 0px 20px 20px;
+}
+
+#switch:checked ~ .outer .details {
+    color: #fff;
+}
+
+
+.content .details .name {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.content .details .job {
+    font-size: 18px; font-weight: 500;
+}
+
+.content .details p {
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.details button {
+    display: block;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    color: #fff;
+    padding: 6px 14px;
+    margin-top: 16px;
+    background: #092c3e;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#switch:checked ~ .outer .details button {
+    background: #fff;
+    color: #092c3e;
+}
+
+.content .details button:hover {
+    transform: scale(0.97);
+}
+
+.content .details .media-icons {
+    position: absolute;
+    bottom: 16px; right: 15px;
+
+}
+
+
+.details .media-icons a {
+    display: inline-flex;
+    margin: 0 4px;
+    color: #092c3e;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+#switch:checked ~ .outer .media-icons a {
+    color: #fff;
+}
+
+.details .media-icons a:hover {
+    opacity: 1;
+}
+
+.container input {
+    display: none;
+}
