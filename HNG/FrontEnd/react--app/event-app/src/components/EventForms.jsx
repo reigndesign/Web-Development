@@ -20,20 +20,26 @@ const EventForms = () => {
         <div className="event--type flex flex-col w-5/6 h-80 mx-auto mt-[10px]">
             <span className="headline--three text-[#fafafa]">Select Ticket Type:</span>
             <div className="event--type-card mt-[10px] flex flex-row justify-around items-center bg-[#052228] border-solid border-[#0E464F] border-2 p-[12px] rounded-[10px] text-[#fafafa]">
-                <div className="event--type-box flex flex-col w-[150px] h-[110px] border-solid border-[#0E464F] border-2 rounded-[10px] text-[14px]">
-                    <h3>Free</h3>
-                    <span>Regular Access</span>
-                    <span>20/52</span>
+                <div className="event--type-box  w-[150px] h-[110px] border-solid border-[#0E464F] border-2 rounded-[10px] text-[14px]">
+                    <div className="event--text flex flex-col pl-[10px]">
+                        <h3>Free</h3>
+                        <span>Regular Access</span>
+                        <span>20/52</span>
+                    </div>
                 </div>
                 <div className="event--type-box flex flex-col w-[150px] h-[110px] border-solid border-[#0E464F] border-2 rounded-[10px] text-[14px]">
-                    <h3>Free</h3>
-                    <span>Regular Access</span>
-                    <span>20/52</span>
+                    <div className="event--text flex flex-col pl-[10px]">
+                        <h3>Free</h3>
+                        <span>Regular Access</span>
+                        <span>20/52</span>
+                    </div>
                 </div>
                 <div className="event--type-box flex flex-col w-[150px] h-[110px] border-solid border-[#0E464F] border-2 rounded-[10px] text-[14px]">
-                    <h3>Free</h3>
-                    <span>Regular Access</span>
-                    <span>20/52</span>
+                    <div className="event--text flex flex-col pl-[10px]">
+                        <h3>Free</h3>
+                        <span>Regular Access</span>
+                        <span>20/52</span>
+                    </div>
                 </div>
             </div>
         </div>
