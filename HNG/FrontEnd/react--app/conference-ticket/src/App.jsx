@@ -5,7 +5,6 @@ import "./App.css";
 import AvatarInput from "./components/AvatarInput";
 import TextInput from "./components/TextInput";
 import infoIcon from "./assets/images/icon-info.svg";
-import githubIcon from "./assets/images/icon-github.svg";
 import ticket from "./assets/images/pattern-ticket.svg";
 
 function App() {
@@ -116,10 +115,10 @@ function App() {
           {!isSubmitted ? (
             <section className="flex flex-col items-center justify-center">
               <h1 className="font-extrabold text-2xl mb-5 text-center mx-4 md:text-5xl">
-                Your Journey to Coding Conf 2025 Starts Here!
+                Your Journey to Xtech Conference 2025 Starts Here!
               </h1>
               <h2 className="text-lg text-center text-neutral-300 mx-4">
-                Secure your spot at next year's biggest coding conference.
+                Secure your spot for the biggest Xtech Conference.
               </h2>
               <form
                 className="w-full max-w-sm mt-8 flex flex-col gap-4"
@@ -191,10 +190,10 @@ function App() {
                       <img src={logoMark} className="size-6 sm:size-8"></img>
                       <div>
                         <h2 className="text-neutral-0 text-lg/4 sm:text-2xl/4 pb-1">
-                          Coding Conf
+                          Xtech Conference
                         </h2>
                         <p className="text-neutral-400 text-xs sm:text-base">
-                          Jan 31, 2025 / Austin TX
+                          Feb 18, 2025 / Lagos, NG
                         </p>
                       </div>
                     </div>
