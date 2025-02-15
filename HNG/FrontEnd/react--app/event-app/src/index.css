@@ -17,7 +17,7 @@
 */
 
 body {
-  background: #041E23;
+  background: #02191D;
   padding: 20px;
   font-family: "Roboto", sans-serif;
 }
@@ -62,14 +62,14 @@ body {
 
 }
 
-.reg--text {
+/* .reg--text {
   color: #FAFAFA;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 510px;
   padding: 20px;
-}
+} */
 
 /* .--mainForm * {
   padding: 0;
