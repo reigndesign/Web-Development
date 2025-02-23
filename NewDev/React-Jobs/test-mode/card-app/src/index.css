@@ -129,7 +129,8 @@ body {
 @media (max-width: 730px) {
 
   .container {
-    height: 70vh;
+    height: 60vh;
+    max-width: 100dvw;
   }
   .card {
     flex-direction: column;
@@ -166,28 +167,23 @@ body {
   .card--skills {
     justify-content: center;
     margin: 0;
-
+    overflow: hidden;
   }
 
   .skills {
-    gap: 5px;
+    gap: 3px;
     margin-top: 10px;
-    padding: 0 10px;
+    padding: 10px;
   }
   
   .skills .html, 
   .skills .node,
   .skills .react,
   .skills .java {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
     text-wrap: nowrap;
     padding: 8px 15px;
   }
 
 }
 
-@media (max-width: 375px) {
-  .container {
-    height: 80vh;
-  }
-}
