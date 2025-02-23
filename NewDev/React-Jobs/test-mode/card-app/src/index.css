@@ -1,0 +1,193 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background:#979696;
+  color: #000;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 700px;
+  width: 100%;
+  height: 50%;
+  background: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+
+}
+.card img {
+  height: 200px;
+  background-color: #3c3c3c;
+  border-radius: 10px
+}
+
+.card--img {
+  padding: 40px;
+}
+
+.card--details {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.card--details h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card--details h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card--details p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 400;
+  max-width: 350px;
+}
+
+.card--skills {
+  display: flex;
+  margin-left: 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.skills .html {
+  background: #ffff00;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #000;
+  font-size: 0.8rem;
+}
+
+.skills .java {
+  background: #0000ff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.skills .react {
+  background: #20b2aa;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.skills .node {
+  background: #008000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.card--icon {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  gap: 10px;
+}
+
+.card--icon a:link,
+.card--icon a:visited {
+  text-decoration: none;
+}
+
+/* MEDIA QUIERRIES */
+
+@media (max-width: 730px) {
+
+  .container {
+    height: 70vh;
+  }
+  .card {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .card--img {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .card--details {
+    margin: 0 auto;
+  }
+
+  .card--details h2, h4 {
+    text-align: center;
+  }
+
+  .card--details p {
+    text-align: start;
+    line-height: 1.1;
+    padding-top: 10px;
+    font-size: 0.8rem;
+  }
+
+  .card--icon {
+    justify-content: center;
+    margin-top: 5px;
+  }
+
+  .card--skills {
+    justify-content: center;
+    margin: 0;
+
+  }
+
+  .skills {
+    gap: 5px;
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+  
+  .skills .html, 
+  .skills .node,
+  .skills .react,
+  .skills .java {
+    font-size: 0.6rem;
+    text-wrap: nowrap;
+    padding: 8px 15px;
+  }
+
+}
+
+@media (max-width: 375px) {
+  .container {
+    height: 80vh;
+  }
+}
