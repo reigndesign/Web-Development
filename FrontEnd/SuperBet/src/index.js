@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import App from './app';
 
-export default function App() {
+
+export default function HomaPage() {
   return (
     <>
-      <div className="intro">
-        <h1>Welcome to SuperBet</h1>
-        <p>Bet Smarter, Bet Fair</p>
-      </div>
+      
     </>
-  );
+  )
 }
 
 
@@ -20,4 +19,3 @@ root.render(
     <App />
   </React.StrictMode>
 );
-
