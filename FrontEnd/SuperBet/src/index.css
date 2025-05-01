@@ -167,6 +167,13 @@ button {
 .container {
   background-color: #FF0D64;
   padding: 10px;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 20px;
+  z-index: 1;
 }
 
 .main--nav {
@@ -176,8 +183,45 @@ button {
   width: 100%;
 }
 
+.nav--data {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .nav--data img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+
+.nav--data span {
+  display: inline-flex;
   margin-left: 10px;
+  align-items: center;
+  
+
+  height: 50px;
+  width: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.nav--data span:hover {
+  background-color: #FF0D64;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav--data span a {
+  margin: 0 auto;
+  text-decoration: none;
+  color: #000000;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
 }
 
 .component--data > li {
