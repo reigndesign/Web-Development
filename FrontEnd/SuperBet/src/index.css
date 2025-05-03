@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Basic Color 
 #181C27
 #214E7E
@@ -172,8 +176,67 @@ button {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   position: relative;
-  top: 20px;
+  top: 10px;
   z-index: 1;
+  height: 30px;
+}
+
+.web--Sport {
+  background-color: rgba(236, 13, 89, 0.6);
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  color: #FDFDFD;
+  overflow: hidden;
+}
+
+.nav--data .web--Sport {
+  display: inline-flex;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.nav--data .web--Sport:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.nav--data .web--Sport a {
+  margin: 0 auto;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.web--Casino {
+  background-color: rgba(236, 13, 89, 0.6);
+  height: 40px;
+  width: 100px;
+  border-radius: 5px;
+  color: #FDFDFD;
+  font-family: "Lato", sans-serif;
+  overflow: hidden;
+}
+
+.nav--data .web--Casino {
+  display: inline-flex;
+  margin-left: 10px;
+  align-items: center;
+
+}
+
+.nav--data .web--Casino:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.nav--data .web--Casino a {
+  margin: 0 auto;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
 .main--nav {
@@ -190,52 +253,56 @@ button {
 }
 
 .nav--data img {
-  height: 50px;
+  height: 30px;
   width: auto;
   margin-right: 10px;
   border-radius: 5px;
-}
-
-
-.nav--data span {
-  display: inline-flex;
-  margin-left: 10px;
-  align-items: center;
-  
-
-  height: 50px;
-  width: 100px;
-  background-color: #fff;
-  border-radius: 5px;
-}
-
-.nav--data span:hover {
-  background-color: #FF0D64;
-  color: #fff;
-  cursor: pointer;
-}
-
-.nav--data span a {
-  margin: 0 auto;
-  text-decoration: none;
-  color: #000000;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  letter-spacing: 1px;
 }
 
 .component--data > li {
   list-style-type: none;
   margin-left: 10px;
   display: inline;
+  padding: 10px;
+}
+
+
+.list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 10px;
+
+  height: 30px;
+  width: 100px;
+  background-color: rgba(236, 13, 89, 0.6);
+  border-radius: 5px;
+  color: #FDFDFD;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.list-item:hover {
+  background-color: #FF0D64;
+  border-radius: 5px;
+  color: #000000;
+  cursor: pointer;
 }
 
 .list-item  a {
   text-decoration: none;
+
+}
+
+.list-item:hover a {
   color: #000000;
 }
 
 
+/* HEROS SECTION STYLING */
 .hero--container {
   padding: 0 150px;
 }
@@ -259,4 +326,49 @@ button {
   background-color: #FF0D64;
   margin-top: 10px;
   width: 100px;
+}
+
+.hero--data {
+  display: flex;
+  /* justify-content: center; */
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70vw;
+  height: 100%;
+  margin-bottom: 20px;
+  position: relative;
+  top: 10px;
+  right: 110px;
+  z-index: 1;
+}
+
+.hero--card-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+
+.hero--card-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 70%;
 }

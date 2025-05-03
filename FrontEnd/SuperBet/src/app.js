@@ -8,7 +8,6 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <HomeSideBar />
       <div className="hero--container">
         <HeroHomePage />
       </div>
