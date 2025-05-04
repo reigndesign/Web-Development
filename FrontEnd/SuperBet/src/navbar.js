@@ -11,8 +11,8 @@ export default function NavBar() {
             <span className="web--Casino"><a href="##">Casino</a></span>
           </div>
           <ul className="component--data">
-              <li className="list-item"><a href="##">Login</a></li>
-              <li className="list-item"><a href="##">Register</a></li>
+              <li className="list-item--primary"><a href="##">Login</a></li>
+              <li className="list-item--secondary"><a href="##">Register</a></li>
             </ul>
         </nav>
       </main>

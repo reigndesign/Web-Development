@@ -182,12 +182,10 @@ button {
 }
 
 .web--Sport {
-  background-color: rgba(236, 13, 89, 0.6);
-  height: 40px;
-  width: 100px;
+  background-color: #FDFDFD;
+  padding: 10px 30px;
   border-radius: 5px;
-  color: #FDFDFD;
-  overflow: hidden;
+  color: #000000;
 }
 
 .nav--data .web--Sport {
@@ -197,9 +195,16 @@ button {
 }
 
 .nav--data .web--Sport:hover {
-  color: #000000;
+  background-color: rebeccapurple;
   cursor: pointer;
+
+  transition:  0.3s ease;
 }
+
+.nav--data .web--Sport:hover a {
+  color: #FDFDFD;
+}
+
 
 .nav--data .web--Sport a {
   margin: 0 auto;
@@ -210,13 +215,11 @@ button {
 }
 
 .web--Casino {
-  background-color: rgba(236, 13, 89, 0.6);
-  height: 40px;
-  width: 100px;
+  background-color: #FDFDFD;
+  padding: 10px 30px;
   border-radius: 5px;
-  color: #FDFDFD;
-  font-family: "Lato", sans-serif;
-  overflow: hidden;
+  color: #000000;
+  
 }
 
 .nav--data .web--Casino {
@@ -227,8 +230,14 @@ button {
 }
 
 .nav--data .web--Casino:hover {
-  color: #000000;
+  background-color: rebeccapurple;
   cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.nav--data .web--Casino:hover a {
+  color: #FDFDFD;
 }
 
 .nav--data .web--Casino a {
@@ -266,39 +275,72 @@ button {
   padding: 10px;
 }
 
-
-.list-item {
+.list-item--primary {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  margin-left: 10px;
-
-  height: 30px;
-  width: 100px;
-  background-color: rgba(236, 13, 89, 0.6);
+  
+  padding: 10px 30px;
+  background-color: #fdfdfd;
   border-radius: 5px;
-  color: #FDFDFD;
+  color: #000;
   font-family: "Lato", sans-serif;
   font-size: 15px;
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
 
-.list-item:hover {
-  background-color: #FF0D64;
-  border-radius: 5px;
+.list-item--primary a:link,
+.list-item--primary a:active {
+  text-decoration: none;
+}
+
+.list-item--primary a {
   color: #000000;
+}
+
+.list-item--primary:hover {
+  background-color: #DE0C0D;
+  color: #FDFDFD;
+
   cursor: pointer;
 }
 
-.list-item  a {
-  text-decoration: none;
-
+.list-item--primary:hover a {
+  color: #fdfdfd;
 }
 
-.list-item:hover a {
-  color: #000000;
+
+.list-item--secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 50px;
+  background-color: #fdfdfd;
+  border-radius: 5px;
+  color: #FDFDFD;
+
+  font-size: 15px;
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.list-item--secondary a:link,
+.list-item--secondary a:active {
+  text-decoration: none;
+  color: #FDFDFD;
+}
+
+.list-item--secondary:hover {
+  background-color: #DE0C0D;
+
+  cursor: pointer;
+}
+
+.list-item--secondary:hover a {
+  color: #FDFDFD;
 }
 
 
