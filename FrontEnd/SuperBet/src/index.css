@@ -262,7 +262,7 @@ button {
 }
 
 .nav--data img {
-  height: 30px;
+  height: 40px;
   width: auto;
   margin-right: 10px;
   border-radius: 5px;
@@ -363,16 +363,10 @@ button {
 
 }
 
-.sidebar .hero--btn {
-  padding: 10px 30px;
-  background-color: #FF0D64;
-  margin-top: 10px;
-  width: 100px;
-}
 
 .hero--data {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   margin: 0 auto;
   align-items: center;
   flex-direction: row;
@@ -397,13 +391,87 @@ button {
   align-items: center;
   flex-direction: column;
   padding: 20px;
-  background-color: #FDFDFD;
+  color: #FDFDFD;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 30%;
+
+  background-image: linear-gradient(
+      rgba(255, 0, 119, 0.45), rgba(255, 0, 157, 0.45)
+    ),url(./img/dynamic-hero-header-for-superbet--04.jpeg);
+  background-size: cover;
+  background-position: top center;
+}
+
+.hero--card-one .hero--title {
+  padding: 5px;
+  text-align: center;
+  font-size: 28px;
+  font-family: "Lato", sans-serif;
 }
 
 .hero--card-two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #FDFDFD;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 190px;
+
+  color: #000000;
+  font-family: "Lato", sans-serif;
+}
+
+.hero--btn {
+  padding: 10px 25px;
+  height: 40px;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.hero--card-two .card--one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card--one .card--body {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.card--body .card--btn {
+  padding: 10px 25px;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #F58929;
+  color: #FDFDFD;
+}
+
+.hero--card-two .card--two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+}
+
+.card--two .card--body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* .card--img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -412,5 +480,16 @@ button {
   background-color: #FDFDFD;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 70%;
+}
+.card--img:hover {
+  background-color: #F58929;
+  cursor: pointer;
+}
+.card--img:hover a {
+  color: #FDFDFD;
+} */
+.card--img img{
+  height: 150px;
+  width: 150px;
+  
 }
