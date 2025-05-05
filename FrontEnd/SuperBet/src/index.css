@@ -469,6 +469,7 @@ button {
   flex-direction: row;
   gap: 10px;
   padding: 10px;
+  
 }
 
 .card--two .card--body {
@@ -477,26 +478,10 @@ button {
   flex-direction: column;
 }
 
-/* .card--img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  background-color: #FDFDFD;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.card--img:hover {
-  background-color: #F58929;
-  cursor: pointer;
-}
-.card--img:hover a {
-  color: #FDFDFD;
-} */
 .card--img img{
   height: 150px;
   width: 150px;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
 }
