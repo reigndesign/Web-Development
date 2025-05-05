@@ -21,6 +21,7 @@
 #FDFDFD
 #000000
 #214E7E
+rgb(102, 51, 153)
 
 */
 
@@ -195,7 +196,7 @@ button {
 }
 
 .nav--data .web--Sport:hover {
-  background-color: rebeccapurple;
+  background-color: rgb(102, 51, 153);
   cursor: pointer;
 
   transition:  0.3s ease;
@@ -230,7 +231,7 @@ button {
 }
 
 .nav--data .web--Casino:hover {
-  background-color: rebeccapurple;
+  background-color: rgb(102, 51, 153);
   cursor: pointer;
 
   transition: 0.3s ease;
@@ -366,8 +367,6 @@ button {
 
 .hero--data {
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
   align-items: center;
   flex-direction: row;
   gap: 20px;
@@ -376,12 +375,13 @@ button {
   background-color: #FDFDFD;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 70vw;
+  width: 75vw;
   height: 100%;
   margin-bottom: 20px;
   position: relative;
-  top: 10px;
-  right: 110px;
+  transform: translate(-50%, -0%);
+  left: 50%;
+  
   z-index: 1;
 }
 
@@ -452,8 +452,14 @@ button {
   padding: 10px 25px;
   height: 40px;
   border-radius: 5px;
-  background-color: #F58929;
+  background-color: rgb(255, 13, 100, 0.80);
   color: #FDFDFD;
+  transition: all 0.3s ease;
+}
+
+.card--body .card--btn:hover {
+  background-color: rgb(102, 51, 153);
+  cursor: pointer;
 }
 
 .hero--card-two .card--two {
@@ -467,7 +473,7 @@ button {
 
 .card--two .card--body {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -491,5 +497,6 @@ button {
 .card--img img{
   height: 150px;
   width: 150px;
+  border-radius: 10px;
   
 }

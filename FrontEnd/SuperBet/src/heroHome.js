@@ -29,10 +29,10 @@ export default function HeroHomePage() {
             <div className="card--img">
               <img src={ Images002 } alt="Casino Games" className="card--image" />
             </div>
-            <div cassName="card--body">
+            <div className="card--body">
               <h2 className="card--title">Casino Games</h2>
               <p className="card--text">Experience the thrill of casino games.</p>
-              
+
               <button className="card--btn">Play Now</button>
             </div>
           </div>
