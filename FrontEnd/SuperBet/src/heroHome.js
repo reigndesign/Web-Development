@@ -9,7 +9,7 @@ export default function HeroHomePage() {
       <div className="hero--data">
         <div className="hero--card-one">
           <h1 className="hero--title">Welcome to SuperBet</h1>
-          <p className="hero--text">Your one-stop destination for all your betting needs.</p>
+          <p className="hero--text">Your one-stop destination for all your betting odds.</p>
           <button className="hero--btn">Get Started</button>
         </div>
         <div className="hero--card-two">

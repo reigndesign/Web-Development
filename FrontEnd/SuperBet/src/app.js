@@ -1,7 +1,7 @@
 import LoginForm from "./loginForm";
 import NavBar from "./navbar";
 import HeroHomePage from "./heroHome";
-import HomeSideBar from "./sideBar";
+import LatestGames from "./lastestGames";
 
 
 export default function App() {
@@ -10,6 +10,9 @@ export default function App() {
       <NavBar />
       <div className="hero--container">
         <HeroHomePage />
+      </div>
+      <div className="lastest--games">
+        <LatestGames />
       </div>
       {/* <LoginForm /> */}
     </>
