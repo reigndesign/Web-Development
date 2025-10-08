@@ -1,20 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import LandPage from './homePage';
+import MainHead from './homePage';
+import JobDetails from './jobDetails';
+
 
 
 
 export default function App() {
   return (
     <>
-    <LandPage />
-      <div className="text">
-        <h1>We are upgrading our website</h1>
-        <p>Where we built responsive website for your business</p>
-        
-        <input className='btn' type='button' value={ 'Contact Us' } />
-      </div>
+    <MainHead />
+    {/* <JobDetails /> */}
     </>
   );
 }

@@ -507,10 +507,10 @@ button {
 .latest--games .latest--games--title {
   position: relative;
   top: -8px;
-  right: 200px;
+  right: 30px;
   padding: 10px;
   font-size: 14px;
-  font-family: "Lato", sans-serif;;
+  font-family: "Lato", sans-serif;
 }
 
 .latest--games .latest--games--container {

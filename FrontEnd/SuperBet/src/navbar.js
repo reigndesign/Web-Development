@@ -1,5 +1,6 @@
 import mainLogo from './img/logo.jpeg';
 
+
 export default function NavBar() {
   return (
     <>
@@ -14,8 +15,19 @@ export default function NavBar() {
               <li className="list-item--primary"><a href="##">Login</a></li>
               <li className="list-item--secondary"><a href="##">Register</a></li>
             </ul>
+
+            <FormModal />
         </nav>
       </main>
+    </>
+  )
+}
+
+function FormModal() {
+  return (
+    <>
+    
+     
     </>
   )
 }

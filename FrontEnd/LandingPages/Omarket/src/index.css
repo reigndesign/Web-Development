@@ -12,8 +12,117 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f7f7f7;
 }
 
 .text {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+  padding: 5%;
+  background-color: #fff;
+  width: 40%;
+  border-radius: 10px;
+  margin-left: 25%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.text h1 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.text p {
+  color: green;
+  font-size: 16px;
+}
+
+
+.btn {
+  margin-top: 10px;
+  padding: 15px 50px;
+  background: #49a099;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+
+}
+
+
+.btn:link, 
+.btn:visited {
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #33e7d8;
+  border: none;
+}
+
+/* NAVBAR SECTION */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.nav {
+  width: 1180px;
+  height: 50px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+
+}
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+}
+
+.logo {
+  height: 90px;
+  width: auto;
+  margin-top: -20px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.nav--visit {
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+.nav--visit a:link, 
+.nav--visit:visited {
+  text-decoration: none;
+  color: #777;
+}
+
+.nav--visit a:hover {
+  border-bottom: 1px #33e7d8 solid;
+  transition: 0.3s ease-in;
+}
+

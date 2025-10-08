@@ -13,7 +13,7 @@ export default function HomeSideBar() {
             <li></li>
             <li></li>
           </ul>
-          <ul className="spannish" >
+          <ul className="spannish">
             <li></li>
             <li></li>
           </ul>
