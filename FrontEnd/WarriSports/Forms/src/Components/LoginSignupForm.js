@@ -38,17 +38,25 @@ function LoginSignupForm() {
         
         <div className='input flex items-center m-auto w-[380px] h-[50px] bg-[#eaeaea] rounded-sm'>
           <img src={password_icon} alt='password icon' className='input-icon m-[0px 30px] h-[30px] px-5' />
-          <input type='text' className='input-field h-[50px] w-[300px] bg-transparent border-none outline-none text-[#797979] font-[19px]' placeholder='Password' />
+          <input type='password' className='input-field h-[50px] w-[300px] bg-transparent border-none outline-none text-[#797979] font-[19px]' placeholder='Password' />
         </div>
         {action==="Sign Up" ? null : <div className='forget-password pl-[110px] text-[#797979] font-[17px] '>Lost Password? <span className='cursor-pointer text-[#4c00b4]'>Click here!</span>
         </div>
 }
       </div>
-      <div className='buttons flex gap-[30px] py-[30px] mx-auto'>
-        <input className={action==="Login"?"submit-btn gray-text":"submit-btn"} onClick={() => {setAction("Sign Up")}} type='button' value={" Sign Up "} />
-        <input className={action==="Sign Up"?"submit-btn gray-text":"submit-btn"} onClick={() => {setAction("Login")}} type='button' value={" Login "}/>
+      {/* Button Section */}
+      <div className='buttons flex gap-[30px] py-[20px] mx-auto'>
+        <input className={action==="Login"?"submit-btn gray-text":"submit-btn"}  type='button' value={" Sign Up "} />
+        <input className={action==="Sign Up"?"submit-btn gray-text":"submit-btn"}  type='button' value={" Login "}/>
       </div>
-      {/* <div className='footer m-auto '>I don't have an account? <span>Sign  Up</span></div> */}
+      {/* Button section Ends Here */}
+
+      {/* Footer Section */}
+      {action==="Sign Up" ? null :<div className='form--footer mx-auto p-[20px] '>I don't have an account? <span className='text-[#4c00b4] cursor-pointer' onClick={() => {setAction("Sign Up")}}>Sign Up</span></div>}
+
+      {action==="Login" ? null : <div className='form--footer mx-auto pb-[20px] '>I already have an account? <span className='text-[#4c00b4] cursor-pointer' onClick={() => {setAction("Login")}}>Login</span>
+      </div>}
+      {/* Footer Section Ends Here */}
       
     </div>
   )
