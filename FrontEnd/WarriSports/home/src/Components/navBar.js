@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Link, Routes, Outlet} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom'
 import MainLogo from './assets/images/WS--Logo__8.png'
 import gift_icon from './assets/icon/gift-outline.svg'
 import search_icon from './assets/icon/search-v2.svg'

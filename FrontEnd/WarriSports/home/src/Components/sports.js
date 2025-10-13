@@ -7,8 +7,8 @@ import banner1 from './assets/images/Banner--1-1.jpg';
 import banner2 from './assets/images/Banner--1-2.jpg';
 import banner3 from './assets/images/Banner--1-3.jpg';
 import banner4 from './assets/images/Banner--1-4.jpg';
-import { PiSoccerBallFill,PiBaseballFill, PiBasketballFill, PiTennisBallFill, PiFootballFill, PiVolleyballFill } from "react-icons/pi";
-import { FaTableTennis, FaGolfBall } from "react-icons/fa";
+import { PiSoccerBallFill, PiBaseballFill, PiBasketballFill, PiTennisBallFill, PiFootballFill, PiVolleyballFill } from "react-icons/pi";
+import { FaGolfBall, FaEnvelope } from "react-icons/fa";
 
 
 
@@ -25,6 +25,7 @@ function Sports() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
+    <> 
     <div className="ws-container">
       <div className="flex justify-between items-start gap-5">
         <div className={`ws-sidebar z-[100] mt-5 bg-emerald-500 ${isOpen ? "w-50" : "w-20"} p-5 pt-8 h-screen rounded-lg shadow-md duration-300 relative`}>
@@ -34,11 +35,21 @@ function Sports() {
         <div className="ws-middle w-8/12 h-auto mt-5 rounded">
           <SportsCarousel />
         </div>
-        <div className="ws-left-sidebar bg-emerald-600 w-50 h-24 mt-5 mr-5 ">
-          <h1>Three</h1>
+        
+          <div className='ws-sidebar-container'>
+            <div className={`ws-left-sidebar bg-emerald-600 ${isOpen ? "h-50 w-60 mb-5" : "w-70"}  mt-5 mr-5 rounded-sm shadow-md duration-300`}>
+              <div className='ws-sidebar-title h-auto'>
+                <h1 className='text-white text-lg font-light p-3 border-b-[1px]'>MY BETS</h1>
+              </div>
+              <div className='ws-sidebar-content p-3 text-white'>
+                <p>You have no bets at the moment</p>
+              </div>
+            </div>
+              <ContactInfo isOpen={isOpen}/>
         </div>
       </div>
     </div>
+    </>
   )
 }
 
@@ -51,20 +62,20 @@ function SportsCarousel() {
       spaceBetween={10}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
       slidesPerView={2}
-      onSlideChange={() => {}}
-      onSwiper={(swiper) => {}} >
+      onSlideChange={() => { }}
+      onSwiper={(swiper) => { }} >
 
       <SwiperSlide >
-        <img src={banner1} alt='Banner 1' className='rounded-sm'/>
+        <img src={banner1} alt='Banner 1' className='rounded-sm' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner2} alt='Banner 2' className='rounded-sm'/>
+        <img src={banner2} alt='Banner 2' className='rounded-sm' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner3} alt='Banner 3' className='rounded-sm'/>
+        <img src={banner3} alt='Banner 3' className='rounded-sm' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={banner4} alt='Banner 4' className='rounded-sm'/>
+        <img src={banner4} alt='Banner 4' className='rounded-sm' />
       </SwiperSlide>
     </Swiper>
   )
@@ -73,34 +84,53 @@ function SportsCarousel() {
 function SportsSidebar({ isOpen }) {
   return (
     <>
-    <div className='inline-flex items-center'>
-      <PiSoccerBallFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
-      <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Soccer</h1>
-    </div>
-    <div className='inline-flex items-center'>
-      <PiBasketballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
-      <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Basketball</h1>
-    </div>
-    <div className='inline-flex items-center'>
-      <PiTennisBallFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
-      <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Tennis</h1>
-    </div>
-    <div className='inline-flex items-center'>
-      <PiVolleyballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
-      <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Volleyball</h1>
-    </div>
-    <div className='inline-flex items-center'>
-      <PiFootballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
-      <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Football</h1>
-    </div>
-    <div className='inline-flex items-center'>
-      <PiBaseballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
-      <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Baseball</h1>
-    </div>
-    <div className='inline-flex items-center'>
-      <FaGolfBall className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
-      <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Golf</h1>
-    </div>
+      <div className='inline-flex items-center'>
+        <PiSoccerBallFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Soccer</h1>
+      </div>
+      <div className='inline-flex items-center'>
+        <PiBasketballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Basketball</h1>
+      </div>
+      <div className='inline-flex items-center'>
+        <PiTennisBallFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Tennis</h1>
+      </div>
+      <div className='inline-flex items-center'>
+        <PiVolleyballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Volleyball</h1>
+      </div>
+      <div className='inline-flex items-center'>
+        <PiFootballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Football</h1>
+      </div>
+      <div className='inline-flex items-center'>
+        <PiBaseballFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Baseball</h1>
+      </div>
+      <div className='inline-flex items-center'>
+        <FaGolfBall className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Golf</h1>
+      </div>
+    </>
+  )
+}
+
+function ContactInfo({ isOpen }) {
+
+  return (
+    <>
+    <div className={`ws-left-sidebar bg-emerald-600 ${isOpen ? "w-60" : "w-70 mt-7"} h-50 mr-5 rounded-sm shadow-md duration-300`}>
+        <div className='ws-sidebar-contact p-5 text-white '>
+            <h1 className='text-lg font-light mb-2 border-b-[1px]'>Need Help?</h1>
+            <p className='text-sm'>Contact our support team 24/7 for any questions you may have.</p>
+            <div className='mt-20 flex flex-col gap-4'>
+              <FaEnvelope className="mt-[20px] text-4xl"/>
+              {/* <FaHeadset /> */}
+            </div>
+
+          </div>
+      </div>
     </>
   )
 }

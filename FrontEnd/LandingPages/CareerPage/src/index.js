@@ -104,7 +104,7 @@ function ApplicationForm() {
   return (
     <>
       <div className="application-form p-10 w-7/12 mx-auto mb-10">
-        <img src={img02} alt="Application-image" className="w-full h-60 object-contain mb-5" />
+        {/* <img src={img02} alt="Application-image" className="w-full h-60 object-contain mb-5" /> */}
         <h2 className="text-2xl font-bold mb-5 text-center">Apply Now</h2>
         <form className="space-y-4 w-6/12 mx-auto mb-10">
           <div>
