@@ -8,7 +8,10 @@ import banner2 from './assets/images/Banner--1-2.jpg';
 import banner3 from './assets/images/Banner--1-3.jpg';
 import banner4 from './assets/images/Banner--1-4.jpg';
 import { PiSoccerBallFill, PiBaseballFill, PiBasketballFill, PiTennisBallFill, PiFootballFill, PiVolleyballFill } from "react-icons/pi";
-import { FaGolfBall, FaEnvelope } from "react-icons/fa";
+import { FaGolfBall, FaEnvelope , FaHeadset, FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { RiGolfBallFill, RiFlashlightFill } from "react-icons/ri";
+
 
 
 
@@ -28,12 +31,54 @@ function Sports() {
     <> 
     <div className="ws-container">
       <div className="flex justify-between items-start gap-5">
-        <div className={`ws-sidebar z-[100] mt-5 bg-emerald-500 ${isOpen ? "w-50" : "w-20"} p-5 pt-8 h-screen rounded-lg shadow-md duration-300 relative`}>
+        <div className={`ws-sidebar mt-5 bg-emerald-500 ${isOpen ? "w-50" : "w-20"} p-5 pt-8 h-screen rounded-lg shadow-md duration-300 relative`}>
           <BsArrowLeftCircle className={`bg-white text-emerald-700 rounded-full text-3xl absolute -right-3 top-9 border border-emerald-300 ${!isOpen && "rotate-180"} cursor-pointer`} onClick={() => setIsOpen(!isOpen)} />
           <SportsSidebar isOpen={isOpen} />
         </div>
-        <div className="ws-middle w-8/12 h-auto mt-5 rounded">
-          <SportsCarousel />
+        <div className="ws-middle--container w-8/12 h-auto mt-5">
+          <div className='ws-middle--row rounded'>
+            <SportsCarousel />
+          </div>
+          <div className='ws-middle--row h-10 bg-emerald-500 mt-5 rounded'>
+            <div className='ws-livemathes--container flex items-center gap-5 pt-2'>
+              <div className='ws-live--matches flex items-center pl-3'>
+                <RiFlashlightFill className='text-white text-2xl' />
+                <h1 className='text-sm text-white'>Live Matches</h1>
+              </div>
+              <div className='flex items-center pl-3 gap-2'>
+                <div className='ws-icon-soccerball'>
+                  <PiSoccerBallFill className='text-white text-2xl rounded cursor-pointer'/>
+                </div>
+
+                <div className='ws-icon-basketball'>
+                  <PiBasketballFill className='text-white text-2xl rounded cursor-pointer'/>
+                </div>
+
+                <div className='ws-icon-tenisball'>
+                  <PiTennisBallFill className='text-white text-2xl rounded cursor-pointer'/>
+                </div>
+
+                <div className='ws-icon-volleyball'>
+                  <PiVolleyballFill className='text-white text-2xl rounded cursor-pointer'/>
+                </div>
+
+                <div className='ws-icon-football'>
+                  <PiFootballFill className='text-white text-2xl rounded cursor-pointer'/>
+                </div>
+
+                <div className='ws-icon-baseball'>
+                  <PiBaseballFill className='text-white text-2xl rounded cursor-pointer'/>
+                </div>
+
+                <div className='ws-icon-golf'>
+                  <RiGolfBallFill className='text-white text-2xl rounded cursor-pointer'/> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='ws-middle--row h-85 bg-emerald-500 mt-5 rounded'>
+            <h1>This Space belong to soccer arena</h1>
+          </div>
         </div>
         
           <div className='ws-sidebar-container'>
@@ -109,7 +154,7 @@ function SportsSidebar({ isOpen }) {
         <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Baseball</h1>
       </div>
       <div className='inline-flex items-center'>
-        <FaGolfBall className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
+        <RiGolfBallFill className='text-white text-3xl rounded cursor-pointer block float-left mr-3' />
         <h1 className={`text-white cursor-pointer origin-left font-light text-sm duration-200 ${!isOpen && "scale-0"}`}>Golf</h1>
       </div>
     </>
@@ -124,11 +169,12 @@ function ContactInfo({ isOpen }) {
         <div className='ws-sidebar-contact p-5 text-white '>
             <h1 className='text-lg font-light mb-2 border-b-[1px]'>Need Help?</h1>
             <p className='text-sm'>Contact our support team 24/7 for any questions you may have.</p>
-            <div className='mt-20 flex flex-col gap-4'>
-              <FaEnvelope className="mt-[20px] text-4xl"/>
-              {/* <FaHeadset /> */}
+            <div className='flex flex-row gap-5 justify-center items-center'>
+              <FaEnvelope className="mt-[15px] text-4xl"/>
+              <FaHeadset className='mt-[15px] text-4xl' />
+              <FaWhatsapp className='mt-[15px] text-4xl'/>
+              <FaXTwitter className='mt-[15px] text-4xl'/>
             </div>
-
           </div>
       </div>
     </>
