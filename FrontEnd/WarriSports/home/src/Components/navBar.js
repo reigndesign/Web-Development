@@ -3,11 +3,11 @@ import MainLogo from './assets/images/WS--Logo__8.png'
 import gift_icon from './assets/icon/gift-outline.svg'
 import search_icon from './assets/icon/search-v2.svg'
 import settings_icon from './assets/icon/settings-outline.svg'
-import Sports from './sports'
-import LiveBetting from './liveBetting'
-import P2pBetting from './p2pBetting'
-import Virtuals from './virtuals'
-import AppDownload from './appDownload'
+import Sports from '../Pages/sports'
+import LiveBetting from '../Pages/liveBetting'
+import P2pBetting from '../Pages/p2pBetting'
+import Virtuals from '../Pages/virtuals'
+import AppDownload from '../Pages/appDownload'
 
 function NavBar() {
 

@@ -1,6 +1,6 @@
 import './assets/css/mainStyle.css'
-import AboutUs from "./aboutUs"
-import NavBar from './navBar'
+import AboutUs from "../Pages/aboutUs"
+import NavBar from '../Components/navBar'
 
 
 function HomePage() {
