@@ -9,6 +9,7 @@ const SidebarContext = createContext()
 const Sidebar = ({ children }) => {
 
   const [expanded, setExpanded] = useState(true);
+  const [activeIndex, setActiveIndex] = useState("");
 
   return (
     <div className="container flex gap-5 items-start">
@@ -21,8 +22,9 @@ const Sidebar = ({ children }) => {
 
               <button onClick={() => setExpanded((curr) => !curr)} className="p-2 rounded-full bg-gray-50 hover:gray-100"> { expanded ? <ArrowLeft /> : <ArrowRight />}</button>
             </div>
+            
             <SidebarContext.Provider value={{ expanded }}>
-              <ul className="flex-2 px-3">{ children }</ul>
+              <ul className="flex-1 px-3">{ children }</ul>
             </SidebarContext.Provider>
 
             <div className="border-t border-[#ff0000] flex p-3 items-center gap-4">
@@ -32,7 +34,9 @@ const Sidebar = ({ children }) => {
                 className="w-10 h-10 rounded-full"
               />
 
-              <div className={`flex justify-between items-center overflow-hidden transition-all`}>
+
+
+              <div className={`flex justify-between items-center transition-all ${ expanded ? "w-52 ml-3" : "w-0 overflow-hidden"}`}>
                 <div className="leading-4">
                   <h4 className="font-semibold">John Doe</h4>
                   <span className="text-xs text-gray-600 ">johndoe@gmail.com</span>
@@ -43,6 +47,7 @@ const Sidebar = ({ children }) => {
           </nav>
         </aside>
       </div>
+
       <div className="ws--sidebar-table w-8/12">
           <table className="table-auto h-auto mx-auto overflow-auto rounded-lg shadow-sm p-5 mt-7">
             <thead className="bg-gray-50 border-b-2 border-[#ff0000]">
@@ -78,7 +83,6 @@ const Sidebar = ({ children }) => {
               </tr>
             </tbody>
           </table>
-          <TransactionHistory />
         </div>
     </div>
   );
@@ -130,7 +134,9 @@ function TransactionHistory () {
   )
 }
 
+
 export default Sidebar;
+
 
 export function SidebarItem({ icon, text, active, alert }) {
   const { expanded } = useContext(SidebarContext)
@@ -144,7 +150,7 @@ export function SidebarItem({ icon, text, active, alert }) {
         ${
           active
             ? "bg-gradient-to-tr from-indigo-200 to-indigo-100 text-indigo-800"
-            : "hover:bg-indigo-50 text-gray-600"
+            : "hover:bg-indigo-50 text-gray-600 "
         }
     `}
     >
@@ -154,15 +160,15 @@ export function SidebarItem({ icon, text, active, alert }) {
           expanded ? "w-52 ml-3" : "w-0"}`}>
         {text}
       </span>
-      {alert && (
+      {/* {alert && (
         <div
           className={`absolute right-2 w-2 h-2 rounded bg-indigo-400 ${
             expanded ? "" : "top-2"
           }`}
         />
-      )}
+      )} */}
 
-      {!expanded && (
+      {/* {!expanded && (
         <div
           className={`
           absolute left-full rounded-md px-2 py-1 ml-6
@@ -172,8 +178,9 @@ export function SidebarItem({ icon, text, active, alert }) {
       `}>
           {text}
         </div>
-      )}
+      )} */}
     </li>
   )
 }
+
 
