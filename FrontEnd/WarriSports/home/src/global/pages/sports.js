@@ -3,10 +3,10 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/module
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { useState } from 'react';
-import banner1 from '../Components/assets/images/Banner--1-1.jpg';
-import banner2 from '../Components/assets/images/Banner--1-2.jpg';
-import banner3 from '../Components/assets/images/Banner--1-3.jpg';
-import banner4 from '../Components/assets/images/Banner--1-4.jpg';
+import banner1 from '../components/assets/images/Banner--1-1.jpg';
+import banner2 from '../components/assets/images/Banner--1-2.jpg';
+import banner3 from '../components/assets/images/Banner--1-3.jpg';
+import banner4 from '../components/assets/images/Banner--1-4.jpg';
 import { PiSoccerBallFill, PiBaseballFill, PiBasketballFill, PiTennisBallFill, PiFootballFill, PiVolleyballFill } from "react-icons/pi";
 import { FaEnvelope , FaHeadset, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -150,8 +150,7 @@ function SportsCarousel() {
       spaceBetween={10}
       autoplay={{ delay: 2500, disableOnInteraction: false }}
       slidesPerView={2}
-      onSlideChange={() => { }}
-      onSwiper={(swiper) => { }} >
+      onSlideChange={() => { }} >
 
       <SwiperSlide >
         <img src={banner1} alt='Banner 1' className='rounded-sm' />

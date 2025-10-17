@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import HomePage from './Components/homePage';
+import HomePage from './global/components/home';
 
 function App() {
   return (
