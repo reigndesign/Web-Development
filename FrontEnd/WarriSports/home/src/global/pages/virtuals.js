@@ -1,8 +1,12 @@
+import NavBar from "../components/navbar"
+
+
 function Virtuals() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <NavBar />
+      <h1>Welcome to virtuals page</h1>
+    </>
   )
 }
 

@@ -1,8 +1,11 @@
+import NavBar from "../components/navbar"
+
 function AppDownload() {
   return (
-    <div>
+    <>
+      <NavBar />
       <h1>Welcome to app download page</h1>
-    </div>
+    </>
   )
 }
 

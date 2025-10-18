@@ -1,9 +1,12 @@
+import NavBar from "../components/navbar";
+
 function P2pBetting() {
   return (
-    <div>
+    <>
+      <NavBar />
       <h1>Welcome to p2p beting page</h1>
-    </div>
-  )
+    </>
+  );
 }
 
-export default P2pBetting
+export default P2pBetting;

@@ -1,8 +1,12 @@
+import NavBar from "../components/navbar"
+
 function LiveBetting() {
   return (
-    <div>
+    <>
+      {/* NavBar Component */}
+      <NavBar />
       <h1>Welcome to live betting page</h1>
-    </div>
+    </>
   )
 }
 

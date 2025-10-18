@@ -1,9 +1,11 @@
-import React from 'react'
+import NavBar from "../components/navbar"
+
 
 function Casino() {
   return (
     <>
-      <h1>Casino Page</h1>
+      <NavBar />
+      <h1>Welcome to Casino Page</h1>
     </>
   )
 }
