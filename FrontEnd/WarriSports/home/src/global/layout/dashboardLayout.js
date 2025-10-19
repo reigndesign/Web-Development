@@ -10,8 +10,8 @@ function DashboardLayout() {
         <div className="flex justify-between items-start gap-5">
           <DashBoarSidebar isOpen={isOpen} />
           <div className="ws-middle--container w-8/12 h-auto mx-auto mt-5">
-            <div className='ws-middle--row h-85 bg-emerald-500 mt-5 shadow-lg'>
-              <table className='ws-table w-auto text-white'>
+            <div className='ws-middle--row h-85 bg-white mt-5 shadow-lg'>
+              <table className='ws-table w-auto text-gray-700'>
                 <thead className='table-auto'>
                   <tr className='flex items-center'>
                   </tr>

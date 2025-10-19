@@ -16,6 +16,7 @@ import Withdraw from './global/clients/dashboard/withdraw';
 import Transactions from './global/clients/dashboard/transactions';
 import Settings from './global/clients/dashboard/settings';
 import Referral from './global/clients/dashboard/referral';
+import App from './App';
 
 
 const router = createBrowserRouter([
@@ -104,5 +105,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
-    <RouterProvider router={router} />
+    <RouterProvider router={router} >
+      <App />
+    </RouterProvider>
 );

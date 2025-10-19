@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { BsArrowLeftCircle } from "react-icons/bs";
-import { RiHome7Fill, RiSettings5Fill, RiExchangeDollarFill } from "react-icons/ri";
+import { RiHome7Fill, RiExchangeDollarFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { PiHandDepositFill, PiHandWithdrawFill  } from "react-icons/pi";
+import { FaUserCog } from "react-icons/fa";
+import { HiMiniUserGroup } from "react-icons/hi2";
+import { MoreVertical } from "lucide-react";
 
 
 
@@ -13,7 +16,7 @@ function DashBoarSidebar() {
   return (
     <>
       <div
-        className={`ws-sidebar mt-10 bg-emerald-500 ${
+        className={`ws-sidebar mt-10 bg-white text-gray-700 ${
           isOpen ? "w-50" : "w-20"
         } p-5 pt-8 h-auto shadow-md duration-300 relative`}
       >
@@ -24,10 +27,10 @@ function DashBoarSidebar() {
           onClick={() => setIsOpen(!isOpen)}
         />
         <div className="inline-flex items-center ">
-          <RiHome7Fill className="text-white text-3xl rounded cursor-pointer block float-left mr-3" />
+          <RiHome7Fill className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="./">
             <h1
-              className={`text-white cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
+              className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
                 !isOpen && "scale-0"
               }`}
             >
@@ -36,10 +39,10 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="inline-flex items-center">
-          <PiHandDepositFill  className="text-white text-3xl rounded cursor-pointer block float-left mr-3" />
+          <PiHandDepositFill  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="./deposit">
             <h1
-              className={`text-white cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
+              className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
                 !isOpen && "scale-0"
               }`}
             >
@@ -48,10 +51,10 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="inline-flex items-center">
-          <RiExchangeDollarFill  className="text-white text-3xl rounded cursor-pointer block float-left mr-3" />
+          <RiExchangeDollarFill  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="./transactions">
             <h1
-              className={`text-white cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
+              className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
                 !isOpen && "scale-0"
               }`}
             >
@@ -60,10 +63,10 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="inline-flex items-center">
-          <PiHandWithdrawFill  className="text-white text-3xl rounded cursor-pointer block float-left mr-3" />
+          <PiHandWithdrawFill  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="./withdraw">
             <h1
-              className={`text-white cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
+              className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
                 !isOpen && "scale-0"
               }`}
             >
@@ -73,10 +76,10 @@ function DashBoarSidebar() {
         </div>
 
         <div className="inline-flex items-center">
-          <PiHandWithdrawFill  className="text-white text-3xl rounded cursor-pointer block float-left mr-3" />
+          <HiMiniUserGroup  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="./referral">
             <h1
-              className={`text-white cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
+              className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
                 !isOpen && "scale-0"
               }`}
             >
@@ -85,10 +88,10 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="inline-flex items-center">
-          <RiSettings5Fill className="text-white text-3xl rounded cursor-pointer block float-left mr-3" />
+          <FaUserCog className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="./settings">
             <h1
-              className={`text-white cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
+              className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
                 !isOpen && "scale-0"
               }`}
             >
@@ -96,6 +99,25 @@ function DashBoarSidebar() {
             </h1>
           </Link>
         </div>
+        <div className="border-t border-[#ff0000] flex items-center gap-4 my-3 py-3">
+              <img
+                src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
+                alt=""
+                className="w-10 h-10 rounded-full"
+              />
+
+
+
+              <div className={`flex justify-between items-center transition-all ${
+                !isOpen && "scale-0"
+              }`}>
+                <div className="leading-4 ">
+                  <h4 className="font-light">Balance</h4>
+                  <span className="text-xs text-gray-600 ">NGN 0.00</span>
+                </div>
+                <MoreVertical size={20} className="cursor-pointer "/>
+              </div>
+            </div>
       </div>
     </>
   );
