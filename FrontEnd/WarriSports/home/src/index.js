@@ -1,23 +1,23 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider  } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import HomePage from './global/pages/home';
-import Sports from './global/pages/sports';
-import LiveBetting from './global/pages/live';
-import P2pBetting from './global/pages/p2pBetting';
-import Casino from './global/pages/casino';
-import AppDownload from './global/pages/appDownload';
-import Virtuals from './global/pages/appDownload';
-import ErrorPage from './global/pages/errorPage';
-import Dashboard from './global/clients/dashboard/index';
-import Deposit from './global/clients/dashboard/deposit';
-import Withdraw from './global/clients/dashboard/withdraw';
-import Transactions from './global/clients/dashboard/transactions';
-import Settings from './global/clients/dashboard/settings';
-import Referral from './global/clients/dashboard/referral';
-import App from './App';
 
+import HomePage from './web/pages/home';
+import Sports from './web/pages/sports';
+import LiveBetting from './web/pages/live';
+import P2pBetting from './web/pages/p2p';
+import Casino from './web/pages/casino';
+import AppDownload from './web/pages/appdownload';
+import Virtuals from './web/pages/virtuals';
+import ErrorPage from './web/pages/errorPage';
+import Dashboard from './web/clients/lite/dashboard';
+import AdminDashboard from './web/scenes/dashboard';
+import Deposit from './web/clients/lite/deposit';
+import Withdraw from './web/clients/lite/withdraw';
+import Transactions from './web/clients/lite/transactions';
+import Settings from './web/clients/lite/settings';
+import Referral from './web/clients/lite/referrals';
 
 const router = createBrowserRouter([
   {
@@ -76,36 +76,41 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/withdraw",
+    path: "clients/withdraw",
     element: <Withdraw />,
     errorElement: <ErrorPage />,
   },
 
   {
-    path: "/transactions",
+    path: "clients/transactions",
     element: <Transactions />,
     errorElement: <ErrorPage />,
   },
 
   {
-    path: "/referral",
+    path: "clients/referral",
     element: <Referral />,
     errorElement: <ErrorPage />,
   },
 
   {
-    path: "/settings",
+    path: "clients/settings",
     element: <Settings />,
     errorElement: <ErrorPage />,
   },
+
+  // Admin Dashboard Layout
+
+  {
+    path: "admin/dashboard",
+    element: <AdminDashboard />,
+    errorElement: <ErrorPage />
+  }
 ]);
 
-
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-
-    <RouterProvider router={router} >
-      <App />
+    <RouterProvider router={router}>
+      <HomePage />
     </RouterProvider>
 );

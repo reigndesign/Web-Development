@@ -16,6 +16,17 @@ export const tokens = (mode) => ({
           800: "#292929",
           900: "#141414",
         },
+        thirdWhite: {
+          100: "#ffffff",
+          200: "#ffffff",
+          300: "#ffffff",
+          400: "#ffffff",
+          500: "#ffffff",
+          600: "#cccccc",
+          700: "#999999",
+          800: "#666666",
+          900: "#333333"
+        },
         primary: {
           100: "#d0d1d5",
           200: "#a1a4ab",
@@ -61,6 +72,7 @@ export const tokens = (mode) => ({
           900: "#151632",
         },
       }
+
     : {
         grey: {
           100: "#141414",
@@ -141,7 +153,7 @@ export const themeSettings = (mode) => {
               light: colors.grey[100],
             },
             background: {
-              default: colors.primary[500],
+              default: colors.greenAccent[600],
             },
           }
         : {

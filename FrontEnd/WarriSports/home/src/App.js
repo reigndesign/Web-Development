@@ -1,20 +1,21 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Topbar from "./global/scenes/global/Topbar";
-import Sidebar from "./global/scenes/global/Sidebar";
-import Dashboard from "./global/scenes/dashboard";
-import Team from "./global/scenes/team";
-import Invoices from "./global/scenes/invoices";
-import Contacts from "./global/scenes/contacts";
-import Bar from "./global/scenes/bar/";
-import Form from "./global/scenes/form";
-import Line from "./global/scenes/line";
-import Pie from "./global/scenes/pie";
-import FAQ from "./global/scenes/faq";
-import Geography from "./global/scenes/geography";
+import Topbar from "./web/scenes/global/Topbar";
+import Sidebar from "./web/scenes/global/Sidebar";
+import Dashboard from "./web/scenes/dashboard";
+import Team from "./web/scenes/users";
+import Invoices from "./web/scenes/invoices";
+import Contacts from "./web/scenes/contacts";
+import Bar from "./web/scenes/bar";
+import Form from "./web/scenes/form";
+import Line from "./web/scenes/line";
+import Pie from "./web/scenes/pie";
+import FAQ from "./web/scenes/faq";
+import Geography from "./web/scenes/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
-import Calendar from "./global/scenes/calendar/";
+import Calendar from "./web/scenes/calendar";
+import { ErrorMessage } from "formik";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -29,8 +30,10 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-              <Route path="/" element={<Dashboard />} />
-              <Route path="/team" element={<Team />} />
+              <Route path="/" element={<Dashboard />} 
+                
+              />
+              <Route path="/users" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />
               <Route path="/invoices" element={<Invoices />} />
               <Route path="/form" element={<Form />} />
