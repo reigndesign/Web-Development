@@ -31,10 +31,11 @@ function Sports() {
       <NavBar />
       <div className="ws-container">
         <div className="flex justify-between items-start gap-5">
+          {/* Sidebar start here */}
           <div
-            className={`ws-sidebar mt-5 bg-emerald-500 ${
+            className={`ws-sidebar mt-5 bg-[#009966] ${
               isOpen ? "w-50" : "w-20"
-            } p-5 pt-8 h-screen rounded-lg shadow-md duration-300 relative`}
+            } p-5 pt-8 h-screen rounded-xs shadow-md duration-300 relative`}
           >
             <BsArrowLeftCircle
               className={`bg-white text-emerald-700 rounded-full text-3xl absolute -right-3 top-9 border border-emerald-300 ${
@@ -45,10 +46,12 @@ function Sports() {
             <SportsSidebar isOpen={isOpen} />
           </div>
           <div className="ws-middle--container w-8/12 h-auto mt-5">
-            <div className="ws-middle--row rounded">
+          {/* Slider for home carousel */}
+            <div className="ws-middle--row rounded-xs">
               <SportsCarousel />
             </div>
-            <div className="ws-middle--row h-10 bg-emerald-500 mt-5 rounded">
+            {/* League fixtures table  */}
+            <div className="ws-middle--row h-10 bg-[#009966] mt-5 rounded">
               <div className="ws-livemathes--container flex items-center gap-5 pt-2">
                 <div className="ws-live--matches flex items-center pl-3">
                   <RiFlashlightFill className="text-white text-2xl" />
@@ -84,75 +87,10 @@ function Sports() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="ws-middle--row h-85 bg-emerald-500 mt-5 rounded">
-              <table className="ws-table w-full text-white">
-                <thead className="table-auto">
-                  <tr className="flex items-center p-2">
-                    <img
-                      src="https://media.api-sports.io/football/leagues/39.png"
-                      alt="League Logo"
-                      className="w-6 h-6 rounded-full text-white"
-                    />
-                    <th className="p-3 text-left font-normal">
-                      English Premier League
-                    </th>
-                  </tr>
-                </thead>
-                <div className="ws-event--table border-b border-emerald-300">
-                  <thead className="ws-event--detail flex justify-start items-center gap-60">
-                    <th className="p-3 text-left font-extralight">Matches</th>
-                    <div className="ws-fixture--table flex items-center gap-30">
-                      <th className="p-3 font-light">Full time result</th>
-                      <th className="p-3 font-light">Goals O/U</th>
-                    </div>
-                  </thead>
-                </div>
-                <tbody>
-                  <div className="border-b border-emerald-300 hover:bg-emerald-400 duration-300 cursor-pointer">
-                    <td className="text-left ">
-                      <div className="inline-flex gap-2 items-center">
-                        <span className=" text-left p-3">Time</span>
-                        <div className="ws-teams flex gap-10 items-center">
-                          <div className="flex flex-col p-3">
-                            <span className="font-light text-sm">
-                              Leeds United
-                            </span>
-                            <span className="text-sm font-light">
-                              Manchester City
-                            </span>
-                          </div>
-                          <div className="ws-fixture--data flex p-3 gap-1">
-                            <span className="px-[25px] py-1 rounded-l text-xs bg-emerald-600">
-                              1
-                            </span>
-                            <span className="px-[25px] py-[4px] text-xs bg-emerald-600">
-                              X
-                            </span>
-                            <span className="bg-emerald-600 px-[25px] py-1 rounded-r text-xs">
-                              2
-                            </span>
-                          </div>
-                        </div>
-                        <div className="ws-fixture--table flex items-center">
-                          <div className="ws-fixture--data inline-flex gap-1">
-                            <span className="px-[30px] py-1 rounded-l text-xs bg-emerald-600">
-                              O
-                            </span>
-                            <span className="bg-emerald-600 px-[30px] py-1 rounded-r text-xs">
-                              U
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                  </div>
-                </tbody>
-              </table>
-            </div>
+            </div>  
           </div>
-
-          <div className="ws-sidebar-container">
+          {/* Left sidebar start here */}
+          <div className="ws-left-sidebar-container">
             <div
               className={`ws-left-sidebar bg-emerald-600 ${
                 isOpen ? "h-50 w-60 mb-5" : "w-70"

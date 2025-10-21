@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import './assets/css/globalstyle.css'
 import MainLogo from "./assets/images/WS--Logo__8.png";
-import gift_icon from "./assets/icon/gift-outline.svg";
-import { BiSearchAlt2 } from "react-icons/bi";
-import settings_icon from "./assets/icon/settings-outline.svg";
+import { BiSearchAlt2, BiSupport  } from "react-icons/bi";
+
+
 
 function NavBar() {
   return (
@@ -20,14 +20,7 @@ function NavBar() {
           </a>
           {/* Navbar Icons Set and button */}
           <div className="flex items-center">
-            <ul className="ws-navBar-icon flex gap-1.5 px-3.5">
-              <li className="ws-icon cursor-pointer">
-                <img src={gift_icon} alt="gift icon" />
-              </li>
-              <li className="ws-icon cursor-pointer">
-                <img src={settings_icon} alt="setting icon" />
-              </li>
-            </ul>
+            
             {/* Login and Register buttons */}
             <ul className="ws-navBar--btn flex gap-3">
               <button className="ws-btn-login py-1.5 px-6 bg-[#ffffff] text-[#F70207] cursor-pointer">
@@ -37,13 +30,21 @@ function NavBar() {
                 Register
               </button>
             </ul>
+            <ul className="ws-navBar-icon flex gap-1.5 px-3.5 items-center">
+              <Link to="/support" className="ws-icon flex items-center gap-1.5 bg-[#f7f7f7ab] cursor-pointer text-white text-lg py-1 px-5 hover:bg-[#f7f7f79a]">
+                <BiSupport  /> <span className="text-normal">Live Support</span>
+              </Link>
+              {/* <li className="ws-icon cursor-pointer text-white text-lg">
+                <BiCog />
+              </li> */}
+            </ul>
           </div>
         </div>
       </nav>
       {/* Top navbar ends here */}
       <nav className="ws-navbar-container p-[10px] bg-[#ffffff] h-12 shadow-b-lg items-center">
         <div className="ws-navBar flex items-center justify-between px-10">
-          <ul className="ws-navBar--item flex flex-row items-center gap-[30px] text-black font-normal">
+          <ul className="ws-navBar--item flex flex-row items-center gap-[30px] text-black font-normal uppercase">
             <Link to="/sport" className="ws-active ws-navBar--link">
               Sports
             </Link>
@@ -54,10 +55,13 @@ function NavBar() {
               P2P Betting
             </Link>
             <Link to="/casino" className="ws-active ws-navBar--link">
-              Casino
+              Live Casino
             </Link>
             <Link to="/virtuals" className="ws-navBar--link">
-              Virtuals
+              Virtual
+            </Link>
+            <Link to="/promotions" className="ws-navBar--link">
+              Promotions
             </Link>
             <Link to="/app" className="ws-navBar--link">
               App

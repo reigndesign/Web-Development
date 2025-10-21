@@ -10,6 +10,7 @@ import P2pBetting from './web/pages/p2p';
 import Casino from './web/pages/casino';
 import AppDownload from './web/pages/appdownload';
 import Virtuals from './web/pages/virtuals';
+import Promotions from './web/pages/promotions'
 import ErrorPage from './web/pages/errorPage';
 import Dashboard from './web/clients/lite/dashboard';
 import AdminDashboard from './web/scenes/dashboard';
@@ -53,6 +54,12 @@ const router = createBrowserRouter([
   {
     path: "virtuals",
     element: <Virtuals />,
+    errorElement: <ErrorPage />,
+  },
+
+  {
+    path: "promotions",
+    element: <Promotions />,
     errorElement: <ErrorPage />,
   },
 
