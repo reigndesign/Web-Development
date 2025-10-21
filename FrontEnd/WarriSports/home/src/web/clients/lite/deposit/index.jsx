@@ -8,7 +8,7 @@ const Deposit = () => {
             <NavBar />
             <div className="flex justify-between items-start ">
               <DashBoarSidebar />
-              <div className="ws-middle--container w-8/12 mx-auto mt-10 shadow-lg h-85 bg-white">
+              <div className="ws-middle--container w-8/12 mx-auto mt-10 shadow-lg h-auto bg-white">
                 <DepositLayout />
               </div>
             </div>

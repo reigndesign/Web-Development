@@ -34,6 +34,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+/* .ws-nav-item {
+  border-bottom: 1px #FF4B5A solid;
+  padding: 5px;
+} */
+
+.ws--btn {
+  margin-top: 5px;
+}
+
+.ws--btn button{
+  padding: 10px 25px;
+  background-color: #00bc7d;
+  color: #ffffff;
+  cursor: pointer;
+  
+}
+
+.ws-navBar--link:hover,
+.ws-navBar--link:focus {
+  border-bottom: 1px #00bc7d solid;
+}
+
 /* NAVIGATION BAR STYLING */
 
 
