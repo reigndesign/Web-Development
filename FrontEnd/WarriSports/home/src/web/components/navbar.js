@@ -57,7 +57,7 @@ function NavBar() {
             <Link to="/casino" className="ws-active ws-navBar--link">
               Live Casino
             </Link>
-            <Link to="/virtuals" className="ws-navBar--link">
+            <Link to="/virtual" className="ws-navBar--link">
               Virtual
             </Link>
             <Link to="/promotions" className="ws-navBar--link">

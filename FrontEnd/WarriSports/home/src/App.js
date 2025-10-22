@@ -1,21 +1,21 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import Topbar from "./web/scenes/global/Topbar";
-import Sidebar from "./web/scenes/global/Sidebar";
-import Dashboard from "./web/scenes/dashboard";
-import Team from "./web/scenes/users";
-import Invoices from "./web/scenes/invoices";
-import Contacts from "./web/scenes/contacts";
-import Bar from "./web/scenes/bar";
-import Form from "./web/scenes/form";
-import Line from "./web/scenes/line";
-import Pie from "./web/scenes/pie";
-import FAQ from "./web/scenes/faq";
-import Geography from "./web/scenes/geography";
+import Topbar from "./web/admin/global/Topbar";
+import Sidebar from "./web/admin/global/Sidebar";
+import Dashboard from "./web/admin/dashboard";
+import Team from "./web/admin/users";
+import Invoices from "./web/admin/invoices";
+import Contacts from "./web/admin/contacts";
+import Bar from "./web/admin/bar";
+import Form from "./web/admin/form";
+import Line from "./web/admin/line";
+import Pie from "./web/admin/pie";
+import FAQ from "./web/admin/faq";
+import Geography from "./web/admin/geography";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
-import Calendar from "./web/scenes/calendar";
-import { ErrorMessage } from "formik";
+import Calendar from "./web/admin/calendar";
+import ErrorMessage from "./web/pages/errorPage";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -30,8 +30,10 @@ function App() {
           <main className="content">
             <Topbar setIsSidebar={setIsSidebar} />
             <Routes>
-              <Route path="/" element={<Dashboard />} 
-                
+              <Route
+                path="/"
+                element={<Dashboard />}
+                errorElement={<ErrorMessage />}
               />
               <Route path="/users" element={<Team />} />
               <Route path="/contacts" element={<Contacts />} />

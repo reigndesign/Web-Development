@@ -1,7 +1,7 @@
-import React from 'react';
 import { createBrowserRouter, RouterProvider  } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import App from './App'
 
 import HomePage from './web/pages/home';
 import Sports from './web/pages/sports';
@@ -9,11 +9,12 @@ import LiveBetting from './web/pages/live';
 import P2pBetting from './web/pages/p2p';
 import Casino from './web/pages/casino';
 import AppDownload from './web/pages/appdownload';
+import Support from './web/pages/support';
 import Virtuals from './web/pages/virtuals';
 import Promotions from './web/pages/promotions'
 import ErrorPage from './web/pages/errorPage';
 import Dashboard from './web/clients/lite/dashboard';
-import AdminDashboard from './web/scenes/dashboard';
+import AdminPanel from './web/admin/dashboard';
 import Deposit from './web/clients/lite/deposit';
 import Withdraw from './web/clients/lite/withdraw';
 import Transactions from './web/clients/lite/transactions';
@@ -52,7 +53,7 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "virtuals",
+    path: "virtual",
     element: <Virtuals />,
     errorElement: <ErrorPage />,
   },
@@ -69,6 +70,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 
+  {
+    path: "support",
+    element: <Support />,
+    errorElement: <ErrorPage />,
+  },
 
   // Clients Layout Routes
   {
@@ -110,7 +116,7 @@ const router = createBrowserRouter([
 
   {
     path: "admin/dashboard",
-    element: <AdminDashboard />,
+    element: <AdminPanel />,
     errorElement: <ErrorPage />
   }
 ]);
@@ -119,5 +125,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <RouterProvider router={router}>
       <HomePage />
-    </RouterProvider>
+    </RouterProvider>,
+
 );
