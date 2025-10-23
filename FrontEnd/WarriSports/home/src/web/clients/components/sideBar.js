@@ -115,16 +115,6 @@ function DashBoarSidebar() {
             <MoreVertical size={20} className="cursor-pointer " />
           </div>
         </div>
-
-        {/* routes for other pages */}
-        {/* <Routes>
-              <Route path="./" element={<Dashboard />} />
-              <Route path="./deposit" element={<Deposit />} />
-              <Route path="./transactions" element={<Transactions />} />
-              <Route path="./withdraw" element={<Withdraw />} />
-              <Route path="./referral" element={<Referral />} />
-              <Route path="./settings" element={<Settings />} />
-            </Routes> */}
       </div>
     </>
   );
