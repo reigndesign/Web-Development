@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider  } from "react-router-dom";
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App'
 
 import HomePage from './web/pages/home';
 import Sports from './web/pages/sports';
@@ -14,12 +13,24 @@ import Virtuals from './web/pages/virtuals';
 import Promotions from './web/pages/promotions'
 import ErrorPage from './web/pages/errorPage';
 import Dashboard from './web/clients/lite/dashboard';
-import AdminPanel from './web/admin/dashboard';
+import AdminHome from './web/admin/pages/dashboard';
 import Deposit from './web/clients/lite/deposit';
 import Withdraw from './web/clients/lite/withdraw';
 import Transactions from './web/clients/lite/transactions';
 import Settings from './web/clients/lite/settings';
 import Referral from './web/clients/lite/referrals';
+
+// this space are for the admin pages
+import Exchange from './web/admin/pages/exchange';
+import Peer2Peer from './web/admin/pages/p2p';
+import SportBook from './web/admin/pages/sportbook';
+import Career from './web/admin/pages/career';
+import Account from './web/admin/pages/account';
+import SupportTicket from './web/admin/pages/support';
+
+
+
+
 
 const router = createBrowserRouter([
   {
@@ -115,10 +126,41 @@ const router = createBrowserRouter([
   // Admin Dashboard Layout
 
   {
-    path: "admin/dashboard",
-    element: <AdminPanel />,
+    path: "/admin/dashboard",
+    element: <AdminHome />,
     errorElement: <ErrorPage />
-  }
+  },
+
+  {
+    path: "/admin/sportbook",
+    element: <SportBook />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/admin/exchange",
+    element: <Exchange />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/admin/p2p",
+    element: <Peer2Peer />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/admin/career",
+    element: <Career />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/admin/account",
+    element: <Account />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path: "/admin/support-ticket",
+    element: <SupportTicket />,
+    errorElement: <ErrorPage />
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

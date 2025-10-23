@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { RiHome7Fill, RiExchangeDollarFill } from "react-icons/ri";
-import { Link } from 'react-router-dom';
-import { PiHandDepositFill, PiHandWithdrawFill  } from "react-icons/pi";
+import { Link } from "react-router-dom";
+import { PiHandDepositFill, PiHandWithdrawFill } from "react-icons/pi";
 import { FaUserCog } from "react-icons/fa";
 import { HiMiniUserGroup } from "react-icons/hi2";
 import { MoreVertical } from "lucide-react";
-
-
-
 
 function DashBoarSidebar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -39,7 +36,7 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="inline-flex items-center">
-          <PiHandDepositFill  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
+          <PiHandDepositFill className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="../clients/deposit">
             <h1
               className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
@@ -51,7 +48,7 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="inline-flex items-center">
-          <RiExchangeDollarFill  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
+          <RiExchangeDollarFill className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="../clients/transactions">
             <h1
               className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
@@ -63,7 +60,7 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="inline-flex items-center">
-          <PiHandWithdrawFill  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
+          <PiHandWithdrawFill className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="../clients/withdraw">
             <h1
               className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
@@ -76,7 +73,7 @@ function DashBoarSidebar() {
         </div>
 
         <div className="inline-flex items-center">
-          <HiMiniUserGroup  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
+          <HiMiniUserGroup className=" text-3xl rounded cursor-pointer block float-left mr-3" />
           <Link to="../clients/referral">
             <h1
               className={` cursor-pointer origin-left font-light text-sm duration-200 hover:border-b-[1px] ${
@@ -100,29 +97,27 @@ function DashBoarSidebar() {
           </Link>
         </div>
         <div className="border-t border-[#ff0000] flex items-center gap-4 my-3 py-3">
-              <img
-                src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
-                alt=""
-                className="w-10 h-10 rounded-full"
-              />
+          <img
+            src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
+            alt=""
+            className="w-10 h-10 rounded-full"
+          />
 
-
-
-              <div className={`flex justify-between items-center transition-all ${
-                !isOpen && "scale-0"
-              }`}>
-                <div className="leading-4 ">
-                  <h4 className="font-light">Balance</h4>
-                  <span className="text-xs text-gray-600 ">NGN 0.00</span>
-                </div>
-                <MoreVertical size={20} className="cursor-pointer "/>
-              </div>
+          <div
+            className={`flex justify-between items-center transition-all ${
+              !isOpen && "scale-0"
+            }`}
+          >
+            <div className="leading-4 ">
+              <h4 className="font-light">Balance</h4>
+              <span className="text-xs text-gray-600 ">NGN 0.00</span>
             </div>
+            <MoreVertical size={20} className="cursor-pointer " />
+          </div>
+        </div>
 
-
-
-            {/* routes for other pages */}
-            {/* <Routes>
+        {/* routes for other pages */}
+        {/* <Routes>
               <Route path="./" element={<Dashboard />} />
               <Route path="./deposit" element={<Deposit />} />
               <Route path="./transactions" element={<Transactions />} />
@@ -134,8 +129,5 @@ function DashBoarSidebar() {
     </>
   );
 }
-
-
-
 
 export default DashBoarSidebar;
