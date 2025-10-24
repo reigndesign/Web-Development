@@ -8,6 +8,7 @@ import {
   PiArrowsLeftRightFill,
   PiCourtBasketballFill,
   PiSignOutFill,
+  PiUserSwitchFill 
 } from "react-icons/pi";
 import { FaRegHandshake } from "react-icons/fa";
 import { MdOutlineSupportAgent } from "react-icons/md";
@@ -110,6 +111,18 @@ function DashBoarSidebar() {
               }`}
             >
               Support
+            </h1>
+          </Link>
+        </div>
+        <div className="inline-flex items-center">
+          <PiUserSwitchFill  className=" text-3xl rounded cursor-pointer block float-left mr-3" />
+          <Link to="../admin/user-referral">
+            <h1
+              className={` cursor-pointer origin-left font-normal text-sm duration-200 hover:border-b-[1px] ${
+                !isOpen && "scale-0"
+              }`}
+            >
+              Referral
             </h1>
           </Link>
         </div>

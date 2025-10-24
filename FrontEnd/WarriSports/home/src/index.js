@@ -27,6 +27,7 @@ import SportBook from './web/admin/pages/sportbook';
 import Career from './web/admin/pages/career';
 import Account from './web/admin/pages/account';
 import SupportTicket from './web/admin/pages/support';
+import UserReferral from './web/admin/pages/user-referral';
 
 
 
@@ -157,6 +158,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />
   },
   {
+    path:"/admin/user-referral",
+    element: <UserReferral />,
+    errorElement: <ErrorPage />
+  },
+  {
     path: "/admin/support-ticket",
     element: <SupportTicket />,
     errorElement: <ErrorPage />
@@ -168,5 +174,4 @@ root.render(
     <RouterProvider router={router}>
       <HomePage />
     </RouterProvider>,
-
 );

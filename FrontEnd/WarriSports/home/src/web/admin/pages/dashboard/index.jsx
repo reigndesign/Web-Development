@@ -17,10 +17,10 @@ const AdminHome = () => {
                 <h4 className="ws--sub_hadlinetext uppercase text-[#009966]">Welcome to warrisport limited</h4>
               </div>
               <div className="ws--search-bar flex flex-col gap-2 mt-5">
-                <div className="ws--search flex items-center gap-5">
+                <div className="ws--search flex items-center gap-5 cursor-pointer">
                   <input type="search" name="search" id="search" placeholder="search..." className="border-2 w-45 h-8 outline-0" /><PiMagnifyingGlassBold />
                 </div>
-                  <button className="py-2 px-4 bg-[#009966] text-white rounded-sm">Download report</button>
+                  <button className="py-2 px-4 bg-[#009966] text-white rounded-sm cursor-pointer">Download report</button>
               </div>
             </div>
             <div className="ws--row flex gap-3 mt-10">
