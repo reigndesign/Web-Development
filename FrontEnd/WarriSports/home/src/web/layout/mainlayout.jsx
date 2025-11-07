@@ -1,4 +1,5 @@
-// import Swiper core and required modules
+// Custom Components
+import FixtureTable from "../components/table";
 
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { useState } from "react";
@@ -46,7 +47,7 @@ function Sports() {
             <SportsSidebar isOpen={isOpen} />
           </div>
           <div className="ws-middle--container w-8/12 h-auto mt-5">
-          {/* Slider for home carousel */}
+            {/* Slider for home carousel */}
             <div className="ws-middle--row rounded-xs">
               <SportsCarousel />
             </div>
@@ -87,7 +88,10 @@ function Sports() {
                   </div>
                 </div>
               </div>
-            </div>  
+            </div>
+            <div className="leaguetable mt-5 bg-white rounded h-52">
+              <FixtureTable />
+            </div>
           </div>
           {/* Left sidebar start here */}
           <div className="ws-left-sidebar-container">
@@ -112,8 +116,6 @@ function Sports() {
     </>
   );
 }
-
-
 
 function SportsSidebar({ isOpen }) {
   return (
